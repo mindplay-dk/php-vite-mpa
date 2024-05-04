@@ -1,0 +1,53 @@
+{
+    "name": "mindplay/php-vite-mpa",
+    "description": "Example MPA based on mindplay/php-vite",
+    "license": "MIT",
+    "type": "project",
+    "scripts": {
+        "_comment": [
+            "if you copy from this file, please note that the built-in `php -S` server is for development/testing only",
+            "in a real-world scenario, use a proper web-server, such as Nginx, Caddy, Apache, etc."
+        ],
+        "build": "npm run build",
+        "start": "npx concurrently \"composer start:server\" \"composer start:vite\" --names \"PHP,Vite\" --kill-others",
+        "start:server": "@php -S localhost:8001 -t public server/index.php",
+        "start:vite": "npm run dev",
+        "preview": [
+            "composer build",
+            "APP_ENV=production composer start:server"
+        ],
+        "post-install-cmd": "npm ci"
+    },
+    "scripts-descriptions": {
+        "start": "Run PHP server and Vite for development",
+        "preview": "Build production assets and run the PHP server",
+        "build": "Build deployment-ready assets for production"
+    },
+    "repositories": [
+        {
+            "_comment": [
+                "if you copy from this file, remove this repository entry, which is here for development/testing only"
+            ],
+            "type": "vcs",
+            "url": "https://github.com/mindplay-dk/php-vite.git"
+        }
+    ],
+    "require": {
+        "mindplay/php-vite": "dev-master"
+    },
+    "config": {
+        "_comment": [
+            "the process-timeout is set to 0 to prevent the composer process from timing out",
+            "if you copy from this file, remove the preferred-install line, which is here for development/testing only"
+        ],
+        "process-timeout": 0,
+        "preferred-install": {
+            "mindplay/php-vite": "source"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "server/src/"
+        }
+    }
+}

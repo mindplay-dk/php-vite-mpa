@@ -1,0 +1,14 @@
+{
+    "name": "php-vite-mpa",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.7",
+        "typescript": "^5.4.5",
+        "vite": "^5.2.10"
+    }
+}
