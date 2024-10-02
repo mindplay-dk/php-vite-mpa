@@ -31,6 +31,8 @@ composer install
 composer start
 ```
 
+⚠️ **NOTE:** Vite displays the wrong URL on startup - you must remove `/dist` from the URL after opening. (if you know how to fix this, please open an issue or PR in the [main repository](https://github.com/mindplay-dk/php-vite/issues).)
+
 ## Production Preview
 
 ```bash
