@@ -14,7 +14,7 @@ $vite = new Manifest(
     dev: getenv('APP_ENV') !== 'production'
 );
 
-$tags = $vite->createTags("index.ts");
+$tags = $vite->createTags("index.tsx");
 
 ?>
 <!DOCTYPE html>
