@@ -3,12 +3,16 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "dev": "vite",
+        "dev": "vite --debug hmr",
         "build": "tsc && vite build"
     },
     "devDependencies": {
+        "@preact/preset-vite": "^2.9.1",
         "@types/node": "^20.12.7",
         "typescript": "^5.4.5",
         "vite": "^5.2.10"
+    },
+    "dependencies": {
+        "preact": "^10.24.1"
     }
 }

@@ -11,6 +11,10 @@
             "DOM",
             "DOM.Iterable"
         ],
+        "paths": {
+            "react": ["./node_modules/preact/compat/"],
+            "react-dom": ["./node_modules/preact/compat/"]
+        },
         "skipLibCheck": true,
         /* Bundler mode */
         "moduleResolution": "bundler",
@@ -19,6 +23,7 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "react-jsx",
+        "jsxImportSource": "preact",
         /* Linting */
         "strict": true,
         "noUnusedLocals": true,

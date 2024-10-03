@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import * as path from 'path';
+import preact from "@preact/preset-vite";
 
 const CLIENT_DIR = "client"; // Directory where the client-side code (entry points and assets) are located
 const PUBLIC_DIR = "public"; // Directory from which the server serves static files
@@ -30,6 +31,6 @@ export default defineConfig({
   },
 
   plugins: [
-    // Add your plugins here
+    preact(),
   ]
 });
